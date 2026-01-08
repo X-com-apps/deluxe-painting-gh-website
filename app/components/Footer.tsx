@@ -31,13 +31,13 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-charcoal pt-16 pb-8">
+    <footer className="pt-16 pb-8 bg-[#322d29] px-8 sm:px-12 lg:px-16 xl:px-20">
       <div className="container mx-auto px-4">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-charcoal-light">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <span className="text-2xl font-display font-bold text-gold">
+              <span className="text-2xl font-display font-bold text-[#d2962d]">
                 DELUXE
               </span>
               <span className="text-lg font-display text-cream">Painting</span>
@@ -51,19 +51,19 @@ const Footer = () => {
                 href="https://instagram.com/Deluxepaintingsolutions"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center text-gold hover:bg-gold hover:text-secondary transition-all"
+                className="w-10 h-10 rounded-lg bg-[#d2962d]/10 flex items-center justify-center text-[#d2962d] hover:bg-[#d2962d] hover:text-secondary transition-all"
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a
                 href="tel:+233548565238"
-                className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center text-gold hover:bg-gold hover:text-secondary transition-all"
+                className="w-10 h-10 rounded-lg bg-[#d2962d]/10 flex items-center justify-center text-[#d2962d] hover:bg-[#d2962d] hover:text-secondary transition-all"
               >
                 <Phone className="w-5 h-5" />
               </a>
               <a
                 href="mailto:Deluxepaintingsolutions@gmail.com"
-                className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center text-gold hover:bg-gold hover:text-secondary transition-all"
+                className="w-10 h-10 rounded-lg bg-[#d2962d]/10 flex items-center justify-center text-[#d2962d] hover:bg-[#d2962d] hover:text-secondary transition-all"
               >
                 <Mail className="w-5 h-5" />
               </a>
@@ -75,12 +75,12 @@ const Footer = () => {
             <h4 className="text-cream font-display font-semibold mb-4">
               Quick Links
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-0">
               {quickLinks.map((link) => (
                 <li key={link.label}>
                   <Button
                     onClick={() => scrollToSection(link.href)}
-                    className="text-cream/60 hover:text-gold transition-colors text-sm"
+                    className="text-cream/60 hover:text-[#d2962d] transition-colors text-sm"
                   >
                     {link.label}
                   </Button>
@@ -112,7 +112,7 @@ const Footer = () => {
               <li>
                 <a
                   href="tel:+233548565238"
-                  className="flex items-start gap-3 text-cream/60 hover:text-gold transition-colors"
+                  className="flex items-start gap-3 text-cream/60 hover:text-[#d2962d] transition-colors"
                 >
                   <Phone className="w-4 h-4 mt-0.5 shrink-0" />
                   <span className="text-sm">+233 54 856 5238</span>
@@ -121,7 +121,7 @@ const Footer = () => {
               <li>
                 <a
                   href="mailto:Deluxepaintingsolutions@gmail.com"
-                  className="flex items-start gap-3 text-cream/60 hover:text-gold transition-colors"
+                  className="flex items-start gap-3 text-cream/60 hover:text-[#d2962d] transition-colors"
                 >
                   <Mail className="w-4 h-4 mt-0.5 shrink-0" />
                   <span className="text-sm break-all">

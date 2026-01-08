@@ -58,11 +58,14 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 lg:py-32 bg-secondary">
+    <section
+      id="services"
+      className="py-20 lg:py-32 bg-[#322d29] px-8 sm:px-12 lg:px-16 xl:px-20"
+    >
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-gold font-medium tracking-wider text-sm uppercase">
+          <span className="text-[#d2962d] font-medium tracking-wider text-sm uppercase text-[#d2962d]">
             Our Services
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-cream mt-3 mb-6">
@@ -77,7 +80,7 @@ const Services = () => {
             return (
               <div
                 key={service.title}
-                className={`group relative bg-charcoal rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-xl ${
+                className={`group relative rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-xl ${
                   service.image ? "aspect-4/3" : "p-8"
                 }`}
                 style={{ animationDelay: `${index * 100}ms` }}
@@ -90,12 +93,18 @@ const Services = () => {
                       alt={service.title}
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-linear-to-t from-secondary via-secondary/60 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/60 to-transparent" />
 
                     {/* Content Overlay */}
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <div className="w-12 h-12 rounded-xl bg-gold/20 backdrop-blur-sm flex items-center justify-center mb-4">
-                        <Icon className="w-6 h-6 text-gold" />
+                    <div
+                      className="absolute bottom-0 left-0 right-0 p-6"
+                      style={{
+                        background:
+                          "linear-gradient(to top, #322d29, transparent)",
+                      }}
+                    >
+                      <div className="w-12 h-12 rounded-xl bg-[#d2962d]/20 backdrop-blur-sm flex items-center justify-center mb-4">
+                        <Icon className="w-6 h-6 text-[#d2962d]" />
                       </div>
                       <h3 className="text-xl font-display font-bold text-cream mb-2">
                         {service.title}
@@ -108,8 +117,8 @@ const Services = () => {
                 ) : (
                   <>
                     {/* Icon Card */}
-                    <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center mb-6 transition-colors group-hover:bg-gold/20">
-                      <Icon className="w-7 h-7 text-gold" />
+                    <div className="w-14 h-14 rounded-xl bg-[#d2962d]/10 flex items-center justify-center mb-6 transition-colors group-hover:bg-[#d2962d]/20">
+                      <Icon className="w-7 h-7 text-[#d2962d]" />
                     </div>
                     <h3 className="text-xl font-display font-bold text-cream mb-3">
                       {service.title}

@@ -56,17 +56,20 @@ const Gallery = () => {
       : artworks.filter((art) => art.category === activeCategory);
 
   return (
-    <section id="gallery" className="py-20 lg:py-32 bg-background">
+    <section
+      id="gallery"
+      className="py-20 lg:py-32 px-8 sm:px-12 lg:px-16 xl:px-20"
+    >
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="text-gold font-medium tracking-wider text-sm uppercase">
+          <span className="text-[#d2962d] font-medium tracking-wider text-sm uppercase text-[#d2962d]">
             Our Gallery
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mt-3 mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-charcoal mt-3 mb-6 text-[#322d29]">
             Stunning Wall Art Collection
           </h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-charcoal/70 text-lg text-[#322d29]">
             Explore our diverse collection of wall arts designed to transform
             and personalize your space.
           </p>
@@ -78,10 +81,10 @@ const Gallery = () => {
             <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-5 py-2.5 rounded-full font-medium transition-all duration-300 ${
+              className={`px-5 py-2.5 rounded-full text-[#322d29]  font-medium transition-all duration-300 ${
                 activeCategory === category.id
-                  ? "bg-gold text-secondary shadow-md"
-                  : "bg-muted text-muted-foreground hover:bg-gold/20 hover:text-gold"
+                  ? "text-[#322d29] bg-[#d2962d] shadow-md"
+                  : "text-muted-foreground text-[#322d29]/80 bg-[#edeae7] hover:bg-[#d2962d]/20 hover:text-[#d2962d]"
               }`}
             >
               {category.label}
@@ -94,7 +97,7 @@ const Gallery = () => {
           {filteredArtworks.map((artwork) => (
             <div
               key={artwork.id}
-              className="group relative aspect-square rounded-2xl overflow-hidden cursor-pointer"
+              className="group relative aspect-square rounded-2xl overflow-hidden cursor-pointer "
             >
               <Image
                 src={artwork.image}
@@ -102,9 +105,15 @@ const Gallery = () => {
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
               {/* Overlay */}
-              <div className="absolute inset-0 bg-linear-to-t from-secondary via-secondary/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300">
-                <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                  <span className="text-gold text-sm uppercase tracking-wider">
+              <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <div
+                  className="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
+                  style={{
+                    background:
+                      "linear-gradient(to top, #322d29 0%, #322d29 40%, transparent 100%)",
+                  }}
+                >
+                  <span className="text-[#d2962d] text-sm uppercase tracking-wider">
                     {artwork.category}
                   </span>
                   <h3 className="text-xl font-display font-bold text-cream mt-1">

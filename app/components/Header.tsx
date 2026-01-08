@@ -35,9 +35,9 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-8 sm:px-12 lg:px-16 xl:px-20 ${
         isScrolled
-          ? "bg-secondary/95 backdrop-blur-md shadow-lg py-3"
+          ? "backdrop-blur-md shadow-lg bg-[#322d29]/80 py-3"
           : "bg-transparent py-6"
       }`}
     >
@@ -53,7 +53,7 @@ const Header = () => {
             <button
               key={link.href}
               onClick={() => scrollToSection(link.href)}
-              className="text-cream/80 hover:text-gold transition-colors font-medium"
+              className="text-cream/80 hover:text-[#d2962d] transition-colors font-medium"
             >
               {link.label}
             </button>
@@ -64,12 +64,16 @@ const Header = () => {
         <div className="hidden md:flex items-center gap-4">
           <a
             href="tel:+233548565238"
-            className="flex items-center gap-2 text-cream/80 hover:text-gold transition-colors"
+            className="flex items-center gap-2 text-cream/80 hover:text-[#d2962d] transition-colors"
           >
             <Phone className="w-4 h-4" />
             <span className="font-medium">+233 54 856 5238</span>
           </a>
-          <Button variant="gold" onClick={() => scrollToSection("#contact")}>
+          <Button
+            variant="gold"
+            onClick={() => scrollToSection("#contact")}
+            className="text-[#322d29]"
+          >
             Get Quote
           </Button>
         </div>
@@ -89,7 +93,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden absolute top-full left-0 right-0 bg-secondary/95 backdrop-blur-md transition-all duration-300 overflow-hidden ${
+        className={`lg:hidden absolute top-full left-0 right-0 backdrop-blur-md transition-all duration-300 overflow-hidden ${
           isMobileMenuOpen ? "max-h-screen py-4" : "max-h-0"
         }`}
       >
@@ -98,14 +102,14 @@ const Header = () => {
             <button
               key={link.href}
               onClick={() => scrollToSection(link.href)}
-              className="text-cream/80 hover:text-gold transition-colors font-medium text-left py-2 border-b border-charcoal-light"
+              className="text-cream/80 hover:text-[#d2962d] transition-colors font-medium text-left py-2 border-b border-charcoal-light"
             >
               {link.label}
             </button>
           ))}
           <a
             href="tel:+233548565238"
-            className="flex items-center gap-2 text-gold py-2"
+            className="flex items-center gap-2 text-[#d2962d] py-2"
           >
             <Phone className="w-4 h-4" />
             <span className="font-medium">+233 54 856 5238</span>

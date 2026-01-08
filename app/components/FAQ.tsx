@@ -45,31 +45,35 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-20 lg:py-32 bg-background">
+    <section
+      id="faq"
+      className="py-20 lg:py-32 px-8 sm:px-12 lg:px-16 xl:px-20"
+    >
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Left Side */}
           <div>
-            <span className="text-gold font-medium tracking-wider text-sm uppercase">
+            <span className="text-[#d2962d] font-medium tracking-wider text-sm uppercase text-[#d2962d]">
               FAQ
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mt-3 mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-charcoal mt-3 mb-6 text-[#322d29]">
               Questions Often Asked
             </h2>
-            <p className="text-muted-foreground text-lg mb-8">
-              Find answers to common questions about our painting services. If you
-              have more questions, don&apos;t hesitate to contact us.
+            <p className="text-charcoal/70 text-lg mb-8 text-[#322d29]">
+              Find answers to common questions about our painting services. If
+              you have more questions, don&apos;t hesitate to contact us.
             </p>
-            <div className="bg-card rounded-2xl p-6 border border-border">
-              <h3 className="font-display font-bold text-foreground mb-2">
+            <div className="rounded-2xl p-6 border  bg-[#edeae7]">
+              <h3 className="font-display font-bold text-charcoal mb-2 text-[#322d29]">
                 Still have questions?
               </h3>
-              <p className="text-muted-foreground text-sm mb-4">
-                Our team is ready to help you with any inquiries about your project.
+              <p className="text-charcoal/70 text-sm mb-4 text-[#322d29]">
+                Our team is ready to help you with any inquiries about your
+                project.
               </p>
               <a
                 href="tel:+233548565238"
-                className="text-gold font-semibold hover:underline"
+                className="text-[#d2962d] font-semibold hover:underline text-[#322d29]"
               >
                 Call us: +233 54 856 5238
               </a>
@@ -83,12 +87,12 @@ const FAQ = () => {
                 <AccordionItem
                   key={index}
                   value={`item-${index}`}
-                  className="bg-card rounded-xl border border-border px-6 data-[state=open]:shadow-md transition-shadow"
+                  className="rounded-xl border border-charcoal/20 px-6 data-[state=open]:shadow-md transition-shadow bg-[#edeae7]"
                 >
-                  <AccordionTrigger className="text-left font-display font-semibold text-foreground hover:text-gold transition-colors py-5">
+                  <AccordionTrigger className="text-left font-display font-semibold text-charcoal text-[#322d29] hover:text-[#d2962d] transition-colors py-5">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground pb-5">
+                  <AccordionContent className="text-charcoal/70 pb-5 text-[#322d29]">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>

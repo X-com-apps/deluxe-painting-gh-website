@@ -2,9 +2,11 @@ import interiorImg from "@/app/assets//interior-painting.jpg";
 import Image from "next/image";
 
 const About = () => {
-
   return (
-    <section id="about" className="py-20 lg:py-32 bg-background">
+    <section
+      id="about"
+      className="pt-20 lg:pt-35 pb-20 lg:pb-35 px-8 sm:px-12 lg:px-16 xl:px-20"
+    >
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Image */}
@@ -17,8 +19,11 @@ const About = () => {
               />
             </div>
             {/* Floating Card */}
-            <div className="absolute -bottom-6 -right-6 bg-secondary text-cream p-6 rounded-xl shadow-lg max-w-50 hidden sm:block">
-              <div className="text-3xl font-display font-bold text-gold mb-1">
+            <div
+              className="absolute -bottom-6 -right-6 text-cream p-6 rounded-xl shadow-lg max-w-50 hidden sm:block"
+              style={{ backgroundColor: "#322d29" }}
+            >
+              <div className="text-3xl font-display font-bold text-[#d2962d] mb-1 text-[#d2962d]">
                 3+
               </div>
               <div className="text-sm text-cream/70">
@@ -29,13 +34,13 @@ const About = () => {
 
           {/* Content */}
           <div>
-            <span className="text-gold font-medium tracking-wider text-sm uppercase">
+            <span className="text-[#d2962d] font-medium tracking-wider text-sm uppercase text-[#d2962d]">
               About Deluxe Painting
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mt-3 mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mt-3 mb-6 text-[#322d29]">
               Transforming Spaces with Excellence
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6 text-[#322d29]">
               We are a premier painting company dedicated to delivering
               exceptional painting experiences for residential, commercial, and
               industrial clients. With a passion for transforming spaces, our
