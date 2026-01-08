@@ -37,17 +37,20 @@ const Advantages = () => {
           <span className="text-gold font-medium tracking-wider text-sm uppercase">
             Why Choose Us
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-cream mt-3 mb-6">
-            Your Advantages With Us
+          <h2 className="text-3xl md:text-3xl lg:text-4xl font-display font-bold text-cream mt-3 mb-6">
+            We are dedicated to enhancing the beauty and value of your property,
+            one wall at a time
           </h2>
-          <p className="text-cream/70 text-lg">
-            We&apos;re committed to delivering excellence at every step of your
-            painting project.
+           <p className="text-cream/70 max-w-3xl mx-auto leading-relaxed">
+            We use only the best quality of paints and
+            apparatus, ensuring a premium finish that lasts. Your satisfaction is
+            our top priority — we work closely with you to understand your vision
+            and ensure the final result exceeds your expectations.
           </p>
         </div>
 
         {/* Advantages Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
           {advantages.map((advantage, index) => {
             const Icon = advantage.icon;
             return (
@@ -65,20 +68,6 @@ const Advantages = () => {
               </div>
             );
           })}
-        </div>
-
-        {/* Promise Section */}
-        <div className="mt-20 bg-linear-to-r from-gold/10 via-gold/5 to-gold/10 rounded-3xl p-8 md:p-12 text-center">
-          <h3 className="text-2xl md:text-3xl font-display font-bold text-cream mb-4">
-            Our Promise
-          </h3>
-          <p className="text-cream/70 max-w-3xl mx-auto leading-relaxed">
-            We are dedicated to enhancing the beauty and value of your property,
-            one wall at a time. We use only the best quality of paints and
-            apparatus, ensuring a premium finish that lasts. Your satisfaction is
-            our top priority — we work closely with you to understand your vision
-            and ensure the final result exceeds your expectations.
-          </p>
         </div>
       </div>
     </section>

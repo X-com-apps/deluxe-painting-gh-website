@@ -1,8 +1,6 @@
 "use client";
 import { Button } from "@/app/components/ui/button";
 import { ChevronDown } from "lucide-react";
-import heroBg from "@/app/assets/hero-bg.jpg";
-import Image from "next/image";
 
 const Hero = () => {
   const scrollToAbout = () => {
@@ -12,12 +10,6 @@ const Hero = () => {
     }
   };
 
-  const scrollToContact = () => {
-    const element = document.querySelector("#contact");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -50,7 +42,7 @@ const Hero = () => {
           {/* Main Heading */}
           <h1 className="animate-fade-in-delay-1 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-cream mb-6 leading-tight">
             Coloring{" "}
-            <span className="text-gradient">Dreams</span>
+            <span className="text-bold">Dreams</span>
             <br />
             Into Reality
           </h1>
@@ -67,7 +59,7 @@ const Hero = () => {
             <Button
               variant="heroSolid"
               size="xl"
-              onClick={scrollToContact}
+              onClick={() => window.open("https://wa.me/233548565238", "_blank")}
               className="min-w-50"
             >
               Get Free Estimate

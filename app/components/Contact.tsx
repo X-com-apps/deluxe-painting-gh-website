@@ -1,40 +1,11 @@
 "use client;"
-
-import { Phone, Mail, MapPin, Instagram, Globe } from "lucide-react";
 import { Button } from "@/app/components/ui/button";
 
 const Contact = () => {
-  const contactInfo = [
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "+233 54 856 5238",
-      href: "tel:+233548565238",
-    },
-    {
-      icon: Mail,
-      label: "Email",
-      value: "Deluxepaintingsolutions@gmail.com",
-      href: "mailto:Deluxepaintingsolutions@gmail.com",
-    },
-    {
-      icon: MapPin,
-      label: "Address",
-      value: "Community 5 traffic, behind MTN office, Tema, Ghana",
-      href: "https://maps.google.com/?q=Community+5+Tema+Ghana",
-    },
-    {
-      icon: Instagram,
-      label: "Instagram",
-      value: "@Deluxepaintingsolutions",
-      href: "https://instagram.com/Deluxepaintingsolutions",
-    },
-  ];
-
   return (
     <section id="contact" className="py-20 lg:py-32 bg-secondary">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
+        <div className="row">
           {/* Left Side - Info */}
           <div>
             <span className="text-gold font-medium tracking-wider text-sm uppercase">Get In Touch</span>
@@ -45,35 +16,11 @@ const Contact = () => {
               Ready to transform your space? Contact us today for a free consultation and estimate. We&apos;re here to answer
               all your questions and help you achieve the perfect finish.
             </p>
-
-            {/* Contact Cards */}
-            <div className="space-y-4">
-              {contactInfo.map((item) => {
-                const Icon = item.icon;
-                return (
-                  <a
-                    key={item.label}
-                    href={item.href}
-                    target={item.href.startsWith("http") ? "_blank" : undefined}
-                    rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                    className="group flex items-start gap-4 bg-charcoal rounded-xl p-4 transition-all duration-300 hover:bg-charcoal-light"
-                  >
-                    <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center shrink-0 transition-colors group-hover:bg-gold/20">
-                      <Icon className="w-5 h-5 text-gold" />
-                    </div>
-                    <div>
-                      <div className="text-cream/50 text-sm">{item.label}</div>
-                      <div className="text-cream font-medium group-hover:text-gold transition-colors">{item.value}</div>
-                    </div>
-                  </a>
-                );
-              })}
-            </div>
           </div>
 
           {/* Right Side - Form */}
           <div className="bg-charcoal rounded-3xl p-8 md:p-10">
-            <h3 className="text-2xl font-display font-bold text-cream mb-6">Request a Free Quote</h3>
+            <h3 className="text-2xl font-display font-gradient text-cream mb-6">Request a Free Quote</h3>
             <form className="space-y-5">
               <div className="grid sm:grid-cols-2 gap-5">
                 <div>

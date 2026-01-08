@@ -2,7 +2,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/app/components/ui/button";
-import logo from "@/app/assets//deluxe-painting-logo.png";
 import Image from "next/image";
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,7 +21,7 @@ const Header = () => {
     { href: "#gallery", label: "Gallery" },
     { href: "#advantages", label: "Why Us" },
     { href: "#faq", label: "FAQ" },
-    { href: "#contact", label: "Contact" },
+    // { href: "#contact", label: "Contact" },
   ];
 
   const scrollToSection = (href: string) => {
@@ -44,7 +43,7 @@ const Header = () => {
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2">
-          <Image src={logo} alt="Company logo" height={80} />
+          <Image src="/assets/deluxe-painting-logo.png" alt="Company logo" height={50} width={60}/>
         </a>
 
         {/* Desktop Navigation */}
@@ -62,14 +61,7 @@ const Header = () => {
 
         {/* CTA Button */}
         <div className="hidden md:flex items-center gap-4">
-          <a
-            href="tel:+233548565238"
-            className="flex items-center gap-2 text-cream/80 hover:text-gold transition-colors"
-          >
-            <Phone className="w-4 h-4" />
-            <span className="font-medium">+233 54 856 5238</span>
-          </a>
-          <Button variant="gold" onClick={() => scrollToSection("#contact")}>
+          <Button variant="gold" onClick={() => window.open("https://wa.me/233548565238", "_blank")}>
             Get Quote
           </Button>
         </div>

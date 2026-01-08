@@ -19,7 +19,7 @@ export default function Home() {
           <Gallery />
           <Advantages />
           <FAQ />
-          <Contact />
+          {/* <Contact /> */}
         </main>
         <Footer />
       </div>
