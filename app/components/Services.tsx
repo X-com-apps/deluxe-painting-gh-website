@@ -6,6 +6,12 @@ import {
   PenTool,
   Layers,
 } from "lucide-react";
+import Commerce from "@/public/assets/commercial-painting.jpg";
+import Interior from "@/public/assets/interior-painting.jpg";
+import Exterior from "@/public/assets/exterior-painting.jpg";
+import AfroArt from "@/public/assets/afro-art.jpg";
+import Image6 from "@/public/assets/image-6.jpg";
+import Image8 from "@/public/assets/image-8.jpg";
 import Image from "next/image";
 
 const Services = () => {
@@ -15,42 +21,42 @@ const Services = () => {
       title: "Residential Painting",
       description:
         "From vibrant exteriors to serene living rooms, we personalize every space to add beauty and character to your home.",
-      image: "/assets/exterior-painting.jpg",
+      image: Exterior,
     },
     {
       icon: Building2,
       title: "Commercial Painting",
       description:
         "We understand the importance of aesthetics in business and deliver top-notch results that reflect your company's reputation.",
-      image: "/assets/interior-painting.jpg",
+      image: Interior,
     },
     {
       icon: Factory,
       title: "Industrial Painting",
       description:
         "Protect and enhance your industrial facilities with specialized solutions using durable paints designed for industrial environments.",
-      image: "/assets/commercial-painting.jpg",
+      image: Commerce,
     },
     {
       icon: Palette,
       title: "Wall Arts & Murals",
       description:
         "Celebrate culture with vibrant Afro, Abstract, Neon, Minimalistic, and Geometric wall art designs tailored to your taste.",
-      image: "/assets/afro-art.jpg",
+      image: AfroArt,
     },
     {
       icon: PenTool,
       title: "3D Digital Plans",
       description:
         "Our state-of-the-art 3D design technology creates precise, photo-realistic visualizations of your painting project.",
-      image: "/assets/image-6.jpg",
+      image: Image6,
     },
     {
       icon: Layers,
       title: "Wall Panels",
       description:
         "Elevate your space with stunning installed wall panels that add texture, depth, and visual interest to any room.",
-      image: "/assets/image-8.jpg",
+      image: Image8,
     },
   ];
 

@@ -49,7 +49,7 @@ const Footer = () => {
                 href="https://instagram.com/Deluxepaintingsolutions"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-lg bg-[#d2962d]/10 flex items-center justify-center text-[#d2962d] hover:bg-[#d2962d] hover:text-secondary transition-all"
+                className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center text-gold hover:bg-gold hover:text-secondary transition-all"
               >
                 <Instagram className="w-5 h-5" />
               </a>

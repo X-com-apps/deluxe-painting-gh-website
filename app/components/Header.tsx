@@ -43,7 +43,12 @@ const Header = () => {
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2">
-          <Image src="/assets/deluxe-painting-logo.png" alt="Company logo" height={50} width={60}/>
+          <Image
+            src="/assets/deluxe-painting-logo.png"
+            alt="Company logo"
+            height={50}
+            width={60}
+          />
         </a>
 
         {/* Desktop Navigation */}
@@ -70,7 +75,7 @@ const Header = () => {
           </a>
           <Button
             variant="gold"
-            onClick={() => scrollToSection("#contact")}
+            onClick={() => window.open("https://wa.me/233548565238", "_blank")}
             className="text-[#322d29]"
           >
             Get Quote

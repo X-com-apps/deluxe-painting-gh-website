@@ -16,9 +16,12 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden ">
       {/* Background Image */}
       <Image
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        fill
+        className="absolute inset-0 object-cover"
         src={heroBg}
         alt="Hero background image describing painting services"
+        priority
+        sizes="100vw"
       />
       {/* <video
         src="/promotion-video.mp4"
@@ -28,7 +31,7 @@ const Hero = () => {
         className="inset-0 w-full h-full object-cover bg-cover bg-center absolute"
       ></video> */}
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-hero" />
+      <div className="absolute inset-0 bg-[#322d29]/90" />
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
