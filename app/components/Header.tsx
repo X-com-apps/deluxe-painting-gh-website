@@ -2,7 +2,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/app/components/ui/button";
-import logo from "@/app/assets//deluxe-painting-logo.png";
 import Image from "next/image";
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,7 +21,7 @@ const Header = () => {
     { href: "#gallery", label: "Gallery" },
     { href: "#advantages", label: "Why Us" },
     { href: "#faq", label: "FAQ" },
-    { href: "#contact", label: "Contact" },
+    // { href: "#contact", label: "Contact" },
   ];
 
   const scrollToSection = (href: string) => {
@@ -44,7 +43,7 @@ const Header = () => {
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2">
-          <Image src={logo} alt="Company logo" height={80} />
+          <Image src="/assets/deluxe-painting-logo.png" alt="Company logo" height={50} width={60}/>
         </a>
 
         {/* Desktop Navigation */}

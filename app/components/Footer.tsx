@@ -1,6 +1,7 @@
 "use client";
-import { Phone, Mail, MapPin, Instagram } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram, Facebook } from "lucide-react";
 import { Button } from "./ui/button";
+import Image from "next/image";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,7 +12,7 @@ const Footer = () => {
     { label: "Gallery", href: "#gallery" },
     { label: "Why Us", href: "#advantages" },
     { label: "FAQ", href: "#faq" },
-    { label: "Contact", href: "#contact" },
+    // { label: "Contact", href: "#contact" },
   ];
 
   const services = [
@@ -37,16 +38,13 @@ const Footer = () => {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <span className="text-2xl font-display font-bold text-[#d2962d]">
-                DELUXE
-              </span>
-              <span className="text-lg font-display text-cream">Painting</span>
+              <Image src="/assets/deluxe-painting-logo.png" alt="Company logo" height={80} width={60}/>
             </div>
             <p className="text-cream/60 text-sm leading-relaxed mb-6">
               Premier painting company dedicated to delivering exceptional
               painting experiences across Ghana. Dreams Into Reality.
             </p>
-            <div className="flex gap-3">
+            <div className="flex gap-1">
               <a
                 href="https://instagram.com/Deluxepaintingsolutions"
                 target="_blank"
@@ -56,16 +54,18 @@ const Footer = () => {
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="tel:+233548565238"
-                className="w-10 h-10 rounded-lg bg-[#d2962d]/10 flex items-center justify-center text-[#d2962d] hover:bg-[#d2962d] hover:text-secondary transition-all"
+                href="https://facebook.com/Deluxepaintingsolutions"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center text-gold hover:bg-gold hover:text-secondary transition-all"
               >
-                <Phone className="w-5 h-5" />
+                <Facebook className="w-5 h-5" />
               </a>
               <a
-                href="mailto:Deluxepaintingsolutions@gmail.com"
-                className="w-10 h-10 rounded-lg bg-[#d2962d]/10 flex items-center justify-center text-[#d2962d] hover:bg-[#d2962d] hover:text-secondary transition-all"
+                href="https://www.threads.com/@deluxepaintingsolutions"
+                className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center text-gold hover:bg-gold hover:text-secondary transition-all"
               >
-                <Mail className="w-5 h-5" />
+                <Image src="/assets/threads.svg" width={20} height={20} alt="Threads icon" className="w-5 h-5 invert" />
               </a>
             </div>
           </div>
@@ -116,17 +116,6 @@ const Footer = () => {
                 >
                   <Phone className="w-4 h-4 mt-0.5 shrink-0" />
                   <span className="text-sm">+233 54 856 5238</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="mailto:Deluxepaintingsolutions@gmail.com"
-                  className="flex items-start gap-3 text-cream/60 hover:text-[#d2962d] transition-colors"
-                >
-                  <Mail className="w-4 h-4 mt-0.5 shrink-0" />
-                  <span className="text-sm break-all">
-                    Deluxepaintingsolutions@gmail.com
-                  </span>
                 </a>
               </li>
               <li>

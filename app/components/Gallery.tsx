@@ -1,9 +1,5 @@
 "use client";
 import { useState } from "react";
-import afroArt from "@/app/assets//afro-art.jpg";
-import abstractArt from "@/app/assets//abstract-art.jpg";
-import minimalistArt from "@/app/assets//minimalist-art.jpg";
-import geometricArt from "@/app/assets//geometric-art.jpg";
 import Image from "next/image";
 
 const Gallery = () => {
@@ -20,7 +16,7 @@ const Gallery = () => {
   const artworks = [
     {
       id: 1,
-      image: afroArt,
+      image: "/assets/afro-art.jpg",
       title: "African Heritage",
       category: "afro",
       description:
@@ -28,7 +24,7 @@ const Gallery = () => {
     },
     {
       id: 2,
-      image: abstractArt,
+      image: "/assets/abstract-art.jpg",
       title: "Ocean Dreams",
       category: "abstract",
       description:
@@ -36,14 +32,14 @@ const Gallery = () => {
     },
     {
       id: 3,
-      image: minimalistArt,
+      image: "/assets/minimalist-art.jpg",
       title: "Serene Balance",
       category: "minimalist",
       description: "Clean lines and subtle colors creating calm and serenity",
     },
     {
       id: 4,
-      image: geometricArt,
+      image: "/assets/geometric-art.jpg",
       title: "Modern Geometry",
       category: "geometric",
       description: "Contemporary patterns with triangles and bold lines",
@@ -103,6 +99,8 @@ const Gallery = () => {
                 src={artwork.image}
                 alt={artwork.title}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                width={80}
+                height={80}
               />
               {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300">

@@ -6,9 +6,6 @@ import {
   PenTool,
   Layers,
 } from "lucide-react";
-import exteriorImg from "@/app/assets//exterior-painting.jpg";
-import interiorImg from "@/app/assets//interior-painting.jpg";
-import commercialImg from "@/app/assets//commercial-painting.jpg";
 import Image from "next/image";
 
 const Services = () => {
@@ -18,42 +15,42 @@ const Services = () => {
       title: "Residential Painting",
       description:
         "From vibrant exteriors to serene living rooms, we personalize every space to add beauty and character to your home.",
-      image: interiorImg,
+      image: "/assets/exterior-painting.jpg",
     },
     {
       icon: Building2,
       title: "Commercial Painting",
       description:
         "We understand the importance of aesthetics in business and deliver top-notch results that reflect your company's reputation.",
-      image: commercialImg,
+      image: "/assets/interior-painting.jpg",
     },
     {
       icon: Factory,
       title: "Industrial Painting",
       description:
         "Protect and enhance your industrial facilities with specialized solutions using durable paints designed for industrial environments.",
-      image: exteriorImg,
+      image: "/assets/commercial-painting.jpg",
     },
     {
       icon: Palette,
       title: "Wall Arts & Murals",
       description:
         "Celebrate culture with vibrant Afro, Abstract, Neon, Minimalistic, and Geometric wall art designs tailored to your taste.",
-      image: null,
+      image: "/assets/afro-art.jpg",
     },
     {
       icon: PenTool,
       title: "3D Digital Plans",
       description:
         "Our state-of-the-art 3D design technology creates precise, photo-realistic visualizations of your painting project.",
-      image: null,
+      image: "/assets/image-6.jpg",
     },
     {
       icon: Layers,
       title: "Wall Panels",
       description:
         "Elevate your space with stunning installed wall panels that add texture, depth, and visual interest to any room.",
-      image: null,
+      image: "/assets/image-8.jpg",
     },
   ];
 
@@ -92,6 +89,8 @@ const Services = () => {
                       src={service.image}
                       alt={service.title}
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      width={120}
+                      height={120}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/60 to-transparent" />
 

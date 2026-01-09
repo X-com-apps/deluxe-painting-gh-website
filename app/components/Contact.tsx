@@ -1,3 +1,4 @@
+"use client;"
 "use client";
 
 import { useState } from "react";
@@ -107,7 +108,7 @@ const Contact = () => {
       className="py-20 lg:py-32 bg-[#322d29] px-8 sm:px-12 lg:px-16 xl:px-20"
     >
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
+        <div className="row">
           {/* Left Side - Info */}
           <div>
             <span className="text-[#d2962d] font-medium tracking-wider text-sm uppercase text-[#d2962d]">
@@ -121,44 +122,12 @@ const Contact = () => {
               consultation and estimate. We&apos;re here to answer all your
               questions and help you achieve the perfect finish.
             </p>
-
-            {/* Contact Cards */}
-            <div className="space-y-4">
-              {contactInfo.map((item) => {
-                const Icon = item.icon;
-                return (
-                  <a
-                    key={item.label}
-                    href={item.href}
-                    target={item.href.startsWith("http") ? "_blank" : undefined}
-                    rel={
-                      item.href.startsWith("http")
-                        ? "noopener noreferrer"
-                        : undefined
-                    }
-                    className="group flex items-start gap-4 rounded-xl p-4 transition-all duration-300"
-                  >
-                    <div className="w-12 h-12 rounded-lg bg-[#d2962d]/10 flex items-center justify-center shrink-0 transition-colors group-hover:bg-[#d2962d]/20">
-                      <Icon className="w-5 h-5 text-[#d2962d]" />
-                    </div>
-                    <div>
-                      <div className="text-cream/50 text-sm">{item.label}</div>
-                      <div className="text-cream font-medium group-hover:text-[#d2962d] transition-colors">
-                        {item.value}
-                      </div>
-                    </div>
-                  </a>
-                );
-              })}
-            </div>
           </div>
 
           {/* Right Side - Form */}
-          <div className="rounded-3xl p-8 md:p-10">
-            <h3 className="text-2xl font-display font-bold text-cream mb-6">
-              Request a Free Quote
-            </h3>
-            <form onSubmit={handleSubmit} className="space-y-5">
+          <div className="bg-charcoal rounded-3xl p-8 md:p-10">
+            <h3 className="text-2xl font-display font-gradient text-cream mb-6">Request a Free Quote</h3>
+            <form className="space-y-5">
               <div className="grid sm:grid-cols-2 gap-5">
                 <div>
                   <label className="block text-cream/70 text-sm mb-2">

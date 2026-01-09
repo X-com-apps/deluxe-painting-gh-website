@@ -1,8 +1,6 @@
 "use client";
 import { Button } from "@/app/components/ui/button";
 import { ChevronDown } from "lucide-react";
-import heroBg from "@/app/assets/hero-bg.jpg";
-import Image from "next/image";
 
 const Hero = () => {
   const scrollToAbout = () => {

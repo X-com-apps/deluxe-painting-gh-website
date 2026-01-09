@@ -1,4 +1,4 @@
-import interiorImg from "@/app/assets//interior-painting.jpg";
+
 import Image from "next/image";
 
 const About = () => {
@@ -13,9 +13,11 @@ const About = () => {
           <div className="relative">
             <div className="aspect-4/3 rounded-2xl overflow-hidden shadow-lg">
               <Image
-                src={interiorImg}
+                src="/assets/interior-painting.jpg"
                 alt="Professional interior painting"
                 className="w-full h-full object-cover"
+                width={120}
+                height={120}
               />
             </div>
             {/* Floating Card */}
