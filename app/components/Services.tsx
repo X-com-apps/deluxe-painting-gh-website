@@ -10,7 +10,7 @@ import Commerce from "@/public/assets/commercial-painting.jpg";
 import Interior from "@/public/assets/interior-painting.jpg";
 import Exterior from "@/public/assets/exterior-painting.jpg";
 import AfroArt from "@/public/assets/afro-art.jpg";
-import Image6 from "@/public/assets/image-6.jpg";
+import Image6 from "@/public/assets/digital.jpg";
 import Image8 from "@/public/assets/wall.jpg";
 import Image from "next/image";
 
